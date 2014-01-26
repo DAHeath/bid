@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf0ba3b7-5430-4a81-a332-4f68b66428a1" name="Default" comment="Initial commit&#10;Bids now reward player based on wager.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bid/Bet.java" afterPath="$PROJECT_DIR$/src/bid/Bet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bid/Bid.java" afterPath="$PROJECT_DIR$/src/bid/Bid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bid/Player.java" afterPath="$PROJECT_DIR$/src/bid/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="bf0ba3b7-5430-4a81-a332-4f68b66428a1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bid.iws" />
@@ -458,6 +454,11 @@
       <created>1390686826665</created>
       <updated>1390686826665</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial commit&#10;Bids now reward player based on wager.">
+      <created>1390707090889</created>
+      <updated>1390707090889</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
