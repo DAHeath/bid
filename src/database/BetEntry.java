@@ -4,7 +4,7 @@ import bet.Bet;
 import bet.BetImpl;
 import bet.Bid;
 
-public class BetEntry {
+public class BetEntry implements Bet {
   public static final String TABLE_CREATION_QUERY = "CREATE TABLE bets(overUnder INTEGER(10));";
   public static final String TABLE_DROP_QUERY = "DROP TABLE bets;";
   private Bet bet;

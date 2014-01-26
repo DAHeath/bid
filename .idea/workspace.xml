@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf0ba3b7-5430-4a81-a332-4f68b66428a1" name="Default" comment="Added simple Database queries for Bets.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bet/Bet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/database/BetEntry.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/DBDemo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/database/DatabaseConnection.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/bid/Bet.java" afterPath="$PROJECT_DIR$/src/bet/BetImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/bid/BetTests.java" afterPath="$PROJECT_DIR$/src/bet/BetTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/bid/Bid.java" afterPath="$PROJECT_DIR$/src/bet/Bid.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/bid/InsufficientFundsException.java" afterPath="$PROJECT_DIR$/src/bet/InsufficientFundsException.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/bid/Player.java" afterPath="$PROJECT_DIR$/src/bet/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bid.iml" afterPath="$PROJECT_DIR$/bid.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="bf0ba3b7-5430-4a81-a332-4f68b66428a1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/BetEntry.java" afterPath="$PROJECT_DIR$/src/database/BetEntry.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bid.iws" />
@@ -100,7 +90,7 @@
       <file leaf-file-name="BetEntry.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/database/BetEntry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="3" selection-start="513" selection-end="513" vertical-scroll-proportion="0.4313099" vertical-offset="0" max-vertical-offset="626">
+            <state line="6" column="21" selection-start="93" selection-end="93" vertical-scroll-proportion="0.14376996" vertical-offset="0" max-vertical-offset="626">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,8 +171,8 @@
         <option value="$PROJECT_DIR$/src/bet/BetTests.java" />
         <option value="$PROJECT_DIR$/src/bet/BetImpl.java" />
         <option value="$PROJECT_DIR$/src/bet/Bet.java" />
-        <option value="$PROJECT_DIR$/src/database/BetEntry.java" />
         <option value="$PROJECT_DIR$/src/database/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/database/BetEntry.java" />
       </list>
     </option>
   </component>
@@ -642,7 +632,11 @@
       <created>1390708850080</created>
       <updated>1390708850080</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added simple Database queries for Bets.">
+      <created>1390763619085</created>
+      <updated>1390763619085</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -800,7 +794,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/BetEntry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="3" selection-start="513" selection-end="513" vertical-scroll-proportion="0.4313099" vertical-offset="0" max-vertical-offset="626">
+        <state line="6" column="21" selection-start="93" selection-end="93" vertical-scroll-proportion="0.14376996" vertical-offset="0" max-vertical-offset="626">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
