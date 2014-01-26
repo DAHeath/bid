@@ -20,7 +20,7 @@ public class Player {
     return bid;
   }
 
-  public void receivePayment(int winnings) {
+  public void receiveFunds(int winnings) {
     funds += winnings;
   }
 

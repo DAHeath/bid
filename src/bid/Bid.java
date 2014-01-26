@@ -14,20 +14,13 @@ public class Bid {
     this.owner = owner;
   }
 
-  public int getWager() {
-    return wager;
+  public void resolve(float overUnder, int result) {
+    if (isWinner(overUnder, result))
+      owner.receiveFunds(2*wager);
   }
 
-  public boolean isWinner(float overUnder, int result) {
-    if (prediction > overUnder && result > overUnder)
-      return true;
-    else if (prediction < overUnder && result < overUnder)
-      return true;
-    else
-      return false;
-  }
-
-  public void payout(int winnings) {
-    owner.receivePayment(winnings);
+  private boolean isWinner(float overUnder, int result) {
+    return (prediction > overUnder && result > overUnder) ||
+            (prediction < overUnder && result < overUnder);
   }
 }

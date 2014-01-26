@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf0ba3b7-5430-4a81-a332-4f68b66428a1" name="Default" comment="" />
+    <list default="true" id="bf0ba3b7-5430-4a81-a332-4f68b66428a1" name="Default" comment="Initial commit&#10;Bids now reward player based on wager.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bid/Bet.java" afterPath="$PROJECT_DIR$/src/bid/Bet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bid/Bid.java" afterPath="$PROJECT_DIR$/src/bid/Bid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bid/Player.java" afterPath="$PROJECT_DIR$/src/bid/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="bid.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -67,47 +73,7 @@
       <file leaf-file-name="BetTests.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bid/BetTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="0" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginTests.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/login/LoginTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="22" selection-start="688" selection-end="688" vertical-scroll-proportion="0.6147541" vertical-offset="0" max-vertical-offset="732">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Registrar.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/login/Registrar.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="31" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/login/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="49" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Manifest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/login/Manifest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+            <state line="7" column="13" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,15 +90,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bid.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Bid.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/bid/Bid.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="20" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+            <state line="23" column="59" selection-start="598" selection-end="598" vertical-scroll-proportion="0.47131148" vertical-offset="0" max-vertical-offset="732">
               <folding>
                 <element signature="e#259#260#0" expanded="true" />
                 <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#314#315#0" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,10 +105,10 @@
       <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bid/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+            <state line="26" column="0" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
               <folding>
-                <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,7 +117,7 @@
       <file leaf-file-name="Bet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bid/Bet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="17" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+            <state line="7" column="0" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,12 +132,13 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/bid/BidTests.java" />
-        <option value="$PROJECT_DIR$/src/bid/Bet.java" />
-        <option value="$PROJECT_DIR$/src/bid/Bid.java" />
         <option value="$PROJECT_DIR$/src/bid/BetTests.java" />
         <option value="$PROJECT_DIR$/src/bid/InsufficientFundsException.java" />
         <option value="$PROJECT_DIR$/src/bid/Player.java" />
@@ -181,6 +146,8 @@
         <option value="$PROJECT_DIR$/src/login/Registrar.java" />
         <option value="$PROJECT_DIR$/src/login/Manifest.java" />
         <option value="$PROJECT_DIR$/src/login/LoginTests.java" />
+        <option value="$PROJECT_DIR$/src/bid/Bet.java" />
+        <option value="$PROJECT_DIR$/src/bid/Bid.java" />
       </list>
     </option>
   </component>
@@ -190,7 +157,7 @@
     <option name="width" value="1873" />
     <option name="height" value="1085" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -250,24 +217,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="login" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="bid" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -291,6 +240,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -298,34 +248,12 @@
       <recent name="bid" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.login in bid">
+  <component name="RunManager" selected="JUnit.bid in bid">
     <configuration default="false" name="bid in bid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bid" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="bid" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="login in bid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="bid" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="login" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
@@ -470,14 +398,35 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="false" name="login in bid" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="bid" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="login" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JUnit.bid in bid" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.login in bid" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.login in bid" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.bid in bid" />
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.bid in bid" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -513,7 +462,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1873" height="1085" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -531,7 +480,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16194548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16194548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23178138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -552,6 +501,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Initial commit&#10;Bids now reward player based on wager." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit&#10;Bids now reward player based on wager." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -561,14 +512,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/bid/Bid.java">
+    <entry file="file://$PROJECT_DIR$/src/bid/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="20" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+        <state line="26" column="0" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
           <folding>
-            <element signature="e#259#260#0" expanded="true" />
-            <element signature="e#287#288#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -580,62 +529,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bid/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/bid/BetTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+        <state line="7" column="13" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
           <folding>
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/bid/Bet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="17" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+        <state line="7" column="0" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bid/BetTests.java">
+    <entry file="file://$PROJECT_DIR$/src/bid/Bid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="0" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+        <state line="23" column="59" selection-start="598" selection-end="598" vertical-scroll-proportion="0.47131148" vertical-offset="0" max-vertical-offset="732">
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="49" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/Registrar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/Manifest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/login/LoginTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="22" selection-start="688" selection-end="688" vertical-scroll-proportion="0.6147541" vertical-offset="0" max-vertical-offset="732">
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
           </folding>
         </state>
       </provider>
