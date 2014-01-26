@@ -1,4 +1,4 @@
-package bid;
+package bet;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +11,7 @@ public class BetTests {
   private static final int OVER = 50;
   private static final int WAGER = 10;
 
-  private Bet bet;
+  private BetImpl bet;
   private Bid bid;
   private Player winner;
   private Player loser;
@@ -20,7 +20,7 @@ public class BetTests {
   public void setUp() {
     winner = new Player(WAGER);
     loser = new Player(WAGER);
-    bet = new Bet(OVER_UNDER);
+    bet = new BetImpl(OVER_UNDER);
   }
 
   @Test

@@ -1,4 +1,4 @@
-package bid;
+package bet;
 
 public class Player {
   private int funds;

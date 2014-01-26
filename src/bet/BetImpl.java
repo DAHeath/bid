@@ -1,13 +1,13 @@
-package bid;
+package bet;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bet {
+public class BetImpl implements Bet {
   private float overUnder;
   private List<Bid> bids;
 
-  public Bet(float overUnder) {
+  public BetImpl(float overUnder) {
     this.overUnder = overUnder;
     bids = new ArrayList<Bid>();
   }
