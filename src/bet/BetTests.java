@@ -12,7 +12,7 @@ public class BetTests {
   private static final int WAGER = 10;
 
   private BetImpl bet;
-  private Bid bid;
+  private BidImpl bid;
   private Player winner;
   private Player loser;
 

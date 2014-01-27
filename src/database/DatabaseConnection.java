@@ -2,21 +2,24 @@ package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
 
 public class DatabaseConnection {
   private static final String dbClassName = "com.mysql.jdbc.Driver";
-  private static final String ADDRESS = "jdbc:mysql://127.0.0.1/testdb";
+  private static final String TEST_ADDRESS = "jdbc:mysql://127.0.0.1/testdb";
   private static final String USERNAME = "testuser";
   private static final String PASSWORD = "test623";
 
+  public static DatabaseConnection testDb = new DatabaseConnection(TEST_ADDRESS);
+
+  private String address;
   private Connection connection;
   private Properties properties;
 
-  public static DatabaseConnection instance = new DatabaseConnection();
-
-  private DatabaseConnection() {
+  private DatabaseConnection(String address) {
+    this.address = address;
     initializeProperties();
     loadJdbc();
   }
@@ -37,7 +40,7 @@ public class DatabaseConnection {
 
   public void connect() {
     try {
-      connection = DriverManager.getConnection(ADDRESS, properties);
+      connection = DriverManager.getConnection(address, properties);
     } catch (SQLException e) {
       e.printStackTrace();
     }
@@ -51,11 +54,26 @@ public class DatabaseConnection {
     }
   }
 
-  public void executeQuery(String query) {
+  /**
+   * For insert, delete, and update queries.
+   */
+  public void updateQuery(String query) {
     try {
-      connection.prepareStatement(query).execute();
+      connection.prepareStatement(query).executeUpdate();
     } catch (SQLException e) {
       e.printStackTrace();
     }
+  }
+
+  public String selectQuery(String table, String key, String colLabel) {
+    String res = "";
+    try {
+      ResultSet rs = connection.prepareStatement("SELECT * FROM " + table + " WHERE " + key).executeQuery();
+      rs.absolute(1);
+      res = rs.getString(colLabel);
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return res;
   }
 }

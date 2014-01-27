@@ -7,15 +7,15 @@ public class Player {
     this.funds = initialFunds;
   }
 
-  public Bid createBid(int wager, int prediction) {
+  public BidImpl createBid(int wager, int prediction) {
     if (wager > funds)
       throw new InsufficientFundsException();
     funds -= wager;
     return makeBid(wager, prediction);
   }
 
-  private Bid makeBid(int wager, int prediction) {
-    Bid bid = new Bid(wager, prediction);
+  private BidImpl makeBid(int wager, int prediction) {
+    BidImpl bid = new BidImpl(wager, prediction);
     bid.setOwner(this);
     return bid;
   }
