@@ -11,15 +11,15 @@ public class BetTests {
   private static final int OVER = 50;
   private static final int WAGER = 10;
 
-  private BetImpl bet;
-  private BidImpl bid;
-  private Player winner;
-  private Player loser;
+  private Bet bet;
+  private Bid bid;
+  private PlayerImpl winner;
+  private PlayerImpl loser;
 
   @Before
   public void setUp() {
-    winner = new Player(WAGER);
-    loser = new Player(WAGER);
+    winner = new PlayerImpl(WAGER);
+    loser = new PlayerImpl(WAGER);
     bet = new BetImpl(OVER_UNDER);
   }
 

@@ -16,6 +16,7 @@ public class EntryTests {
     testDb.updateQuery(BidEntry.CREATE_BID_TABLE);
     testDb.updateQuery(BetEntry.CREATE_BET_TABLE);
     testDb.updateQuery(BetEntry.CREATE_BET_BID_TABLE);
+    testDb.updateQuery(PlayerEntry.CREATE_PLAYER_TABLE);
   }
 
   @After
@@ -23,6 +24,7 @@ public class EntryTests {
     testDb.updateQuery(BidEntry.DROP_BID_TABLE);
     testDb.updateQuery(BetEntry.DROP_BET_TABLE);
     testDb.updateQuery(BetEntry.DROP_BET_BID_TABLE);
+    testDb.updateQuery(PlayerEntry.DROP_PLAYER_TABLE);
     testDb.disconnect();
   }
 
@@ -49,5 +51,14 @@ public class EntryTests {
     Bet exp = new BetImpl(10.5f);
     exp.acceptBid(new BidImpl(5, 10));
     assertEquals(exp, BetEntry.load(0));
+  }
+
+  @Test
+  public void multiplePlayerPersistence() {
+    new PlayerEntry(10);
+    new PlayerEntry(20);
+    assertEquals(new PlayerImpl(0, 10), PlayerEntry.load(0));
+    assertEquals(new PlayerImpl(1, 20), PlayerEntry.load(1));
+
   }
 }
