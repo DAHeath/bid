@@ -49,4 +49,9 @@ public class BidImpl implements Bid {
     Bid b = (Bid)o;
     return b.hashCode() == hashCode();
   }
+
+  @Override
+  public String toString() {
+    return "id: " + id + ", wager: " + wager + ", prediction: " + prediction;
+  }
 }

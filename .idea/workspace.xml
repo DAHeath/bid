@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b7a7ae4-41d2-419e-8cb4-7af724529fa7" name="Default" comment="Can save and load bids and bets. Testability added.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/database/BidEntry.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/database/EntryTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/bet/Bid.java" afterPath="$PROJECT_DIR$/src/bet/BidImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bet/Bet.java" afterPath="$PROJECT_DIR$/src/bet/Bet.java" />
+    <list default="true" id="1b7a7ae4-41d2-419e-8cb4-7af724529fa7" name="Default" comment="Can save and load bids and bets. Testability added.&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/BetEntry.java" afterPath="$PROJECT_DIR$/src/database/BetEntry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bet/BetImpl.java" afterPath="$PROJECT_DIR$/src/bet/BetImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bet/BetTests.java" afterPath="$PROJECT_DIR$/src/bet/BetTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bet/Bid.java" afterPath="$PROJECT_DIR$/src/bet/Bid.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/BidEntry.java" afterPath="$PROJECT_DIR$/src/database/BidEntry.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bet/BidImpl.java" afterPath="$PROJECT_DIR$/src/bet/BidImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/DatabaseConnection.java" afterPath="$PROJECT_DIR$/src/database/DatabaseConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bet/Player.java" afterPath="$PROJECT_DIR$/src/bet/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/EntryTests.java" afterPath="$PROJECT_DIR$/src/database/EntryTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bid.iml" afterPath="$PROJECT_DIR$/bid.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bid.iws" />
@@ -75,42 +71,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BidEntry.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/BidEntry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="45" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1140">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bid.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bet/Bid.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="17" selection-start="31" selection-end="31" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BidImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bet/BidImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="19" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="810">
+            <state line="54" column="77" selection-start="1320" selection-end="1320" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="885">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntryTests.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/EntryTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="24" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -118,7 +83,7 @@
       <file leaf-file-name="BetEntry.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/database/BetEntry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="35" selection-start="1421" selection-end="1421" vertical-scroll-proportion="1.1489071" vertical-offset="119" max-vertical-offset="1080">
+            <state line="49" column="0" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.98790324" vertical-offset="0" max-vertical-offset="1050">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,37 +91,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NumberFormatException.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/default-java/jre/lib/rt.jar!/java/lang/NumberFormatException.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Integer.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///usr/lib/jvm/default-java/jre/lib/rt.jar!/java/lang/Integer.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="0" selection-start="3971" selection-end="3971" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1650">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BetImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bet/BetImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="18" selection-start="804" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="750">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DatabaseConnection.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/database/DatabaseConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="0" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0" vertical-offset="625" max-vertical-offset="1260">
+            <state line="62" column="7" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1455">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntryTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database/EntryTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="30" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="915">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BidEntry.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database/BidEntry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="0" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1200">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,11 +138,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/bet/Bet.java" />
-        <option value="$PROJECT_DIR$/src/database/EntryTests.java" />
-        <option value="$PROJECT_DIR$/src/database/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/src/database/BidEntry.java" />
         <option value="$PROJECT_DIR$/src/bet/BetImpl.java" />
+        <option value="$PROJECT_DIR$/src/database/DatabaseConnection.java" />
         <option value="$PROJECT_DIR$/src/bet/BidImpl.java" />
+        <option value="$PROJECT_DIR$/src/database/BidEntry.java" />
+        <option value="$PROJECT_DIR$/src/database/EntryTests.java" />
         <option value="$PROJECT_DIR$/src/database/BetEntry.java" />
       </list>
     </option>
@@ -323,6 +283,15 @@
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysql-connector-java-5.1.28-bin.jar!/" />
+  </component>
+  <component name="RecentsManager">
+    <key name="IntroduceConstantDialog.RECENTS_KEY">
+      <recent name="database.BetEntry" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.database in bid">
     <configuration default="false" name="BetEntry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -375,7 +344,13 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -524,12 +499,34 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1b7a7ae4-41d2-419e-8cb4-7af724529fa7" name="Default" comment="" />
       <created>1390783961443</created>
       <updated>1390783961443</updated>
     </task>
+    <task id="LOCAL-00001" summary="Can save and load bids and bets. Testability added.">
+      <created>1390792849870</created>
+      <updated>1390792849870</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -542,7 +539,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39979756" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -552,8 +549,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12560128" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23178138" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13415286" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21963562" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -574,7 +571,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Can save and load bids and bets. Testability added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Can save and load bids and bets. Testability added." />
+    <MESSAGE value="Can save and load bids and bets. Testability added.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can save and load bids and bets. Testability added.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -584,15 +582,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/friend/FriendTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bet/Bet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
@@ -600,23 +589,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/bet/BetTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bet/InsufficientFundsException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="13" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../mysql-connector-java-5.1.28-bin.jar!/com/mysql/jdbc/JDBC4ResultSet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="0" selection-start="7732" selection-end="7732" vertical-scroll-proportion="-71.4" vertical-offset="0" max-vertical-offset="1875">
           <folding />
         </state>
       </provider>
@@ -642,9 +617,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/EntryTests.java">
+    <entry file="file://$PROJECT_DIR$/src/bet/BetImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="24" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+        <state line="42" column="18" selection-start="804" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="750">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bet/BetTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/friend/FriendTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="36" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bet/BidImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="77" selection-start="1320" selection-end="1320" vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="885">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/BidEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="1200">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -653,45 +656,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/DatabaseConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="0" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0" vertical-offset="625" max-vertical-offset="1260">
+        <state line="62" column="7" selection-start="1545" selection-end="1545" vertical-scroll-proportion="0.0" vertical-offset="494" max-vertical-offset="1455">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/BidEntry.java">
+    <entry file="file://$PROJECT_DIR$/src/database/EntryTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="45" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.0" vertical-offset="179" max-vertical-offset="1140">
+        <state line="37" column="30" selection-start="892" selection-end="892" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="915">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bet/BetImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="18" selection-start="804" selection-end="809" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bet/BidImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="19" selection-start="1137" selection-end="1137" vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="810">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/BetEntry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="35" selection-start="1421" selection-end="1421" vertical-scroll-proportion="1.1489071" vertical-offset="119" max-vertical-offset="1080">
+        <state line="49" column="0" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.98790324" vertical-offset="0" max-vertical-offset="1050">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>bid</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

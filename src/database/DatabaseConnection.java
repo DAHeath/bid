@@ -69,11 +69,24 @@ public class DatabaseConnection {
     String res = "";
     try {
       ResultSet rs = connection.prepareStatement("SELECT * FROM " + table + " WHERE " + key).executeQuery();
-      rs.absolute(1);
+      rs.next();
       res = rs.getString(colLabel);
     } catch (SQLException e) {
       e.printStackTrace();
     }
     return res;
+  }
+
+  public int getMax(String table, String colLabel) {
+    try {
+      ResultSet rs = connection.prepareStatement("SELECT max(" + colLabel + ") FROM " + table +";").executeQuery();
+      rs.next();
+      return Integer.parseInt(rs.getString("max(" + colLabel + ")"));
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } catch (NumberFormatException e) {
+      return -1;
+    }
+    return 0;
   }
 }

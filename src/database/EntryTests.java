@@ -1,15 +1,12 @@
 package database;
 
-import bet.Bet;
-import bet.BetImpl;
-import bet.Bid;
-import bet.BidImpl;
+import bet.*;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
 
 import static database.DatabaseConnection.testDb;
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertEquals;
 
 public class EntryTests {
 
@@ -30,14 +27,29 @@ public class EntryTests {
   @Test
   public void betPersistence() {
     new BetEntry(10.5f);
-    Bet bet = BetEntry.load(0);
-    assertEquals(new BetImpl(10.5f), bet);
+    assertEquals(new BetImpl(0, 10.5f), BetEntry.load(0));
+  }
+
+  @Test
+  public void multipleBetPersistence() {
+    new BetEntry(10.5f);
+    new BetEntry(20.5f);
+    assertEquals(new BetImpl(0, 10.5f), BetEntry.load(0));
+    assertEquals(new BetImpl(1, 20.5f), BetEntry.load(1));
+
   }
 
   @Test
   public void bidPersistence() {
     new BidEntry(5, 10);
-    Bid bid = BidEntry.load(0);
-    assertEquals(new BidImpl(5, 10), bid);
+    assertEquals(new BidImpl(0, 5, 10), BidEntry.load(0));
+  }
+
+  @Test
+  public void multipleBidPersistence() {
+    new BidEntry(5, 10);
+    new BidEntry(10, 20);
+    assertEquals(new BidImpl(0, 5, 10), BidEntry.load(0));
+    assertEquals(new BidImpl(1, 10, 20), BidEntry.load(1));
   }
 }
