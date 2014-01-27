@@ -52,6 +52,6 @@ public class BidImpl implements Bid {
 
   @Override
   public String toString() {
-    return "id: " + id + ", wager: " + wager + ", prediction: " + prediction;
+    return "id: " + id + ", wager: " + wager + ", prediction: " + prediction + ", owner: " + owner;
   }
 }

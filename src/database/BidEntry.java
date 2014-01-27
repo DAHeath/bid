@@ -7,40 +7,55 @@ import bet.Player;
 import static database.Database.testDb;
 
 public class BidEntry implements Bid {
-  public static final String TABLE_NAME = "bids";
-  public static final String CREATE_BID_TABLE =
-          "CREATE TABLE " + TABLE_NAME + "(" +
-                  "id INTEGER, " +
-                  "wager INTEGER, " +
-                  "prediction INTEGER, " +
-                  "owner_id INTEGER, "  +
-                  "PRIMARY KEY (id));";
-  public static final String DROP_BID_TABLE = "DROP TABLE " + TABLE_NAME + ";";
-
-  private Bid bid;
-
-  public static Bid load(int id) {
-    int wager = Integer.parseInt(testDb.selectQuery(TABLE_NAME, "id=" + id, "wager").get(0));
-    int prediction = Integer.parseInt(testDb.selectQuery(TABLE_NAME, "id=" + id, "prediction").get(0));
-    return new BidEntry(id, wager, prediction);
+  public static Table table = new Table(testDb, "bid");
+  static {
+    table.addAttribute(Table.Type.INTEGER, "id");
+    table.addAttribute(Table.Type.INTEGER, "wager");
+    table.addAttribute(Table.Type.INTEGER, "prediction");
+    table.addAttribute(Table.Type.INTEGER, "player_id");
+    table.setPrimaryKey("id");
   }
 
-  public BidEntry(int id, int wager, int prediction) {
+  private Bid bid;
+  private final int id;
+  private final int wager;
+  private final int prediction;
+  private int playerId;
+
+  public static Bid load(int id) {
+    Row row = table.selectWhere("id", id).get(0);
+    int wager = row.intAt("wager");
+    int prediction = row.intAt("prediction");
+    BidEntry bid = new BidEntry(id, wager, prediction);
+    loadOwner(row.intAt("player_id"), bid);
+    return bid;
+  }
+
+  private static void loadOwner(int playerId, BidEntry bid) {
+    if (playerId != -1)
+      bid.setOwner(PlayerEntry.load(playerId));
+  }
+
+  private BidEntry(int id, int wager, int prediction) {
+    this.id = id;
+    this.wager = wager;
+    this.prediction = prediction;
+    this.playerId = -1;
     bid = new BidImpl(id, wager, prediction);
   }
 
   public BidEntry(int wager, int prediction) {
-    int id = testDb.getMax(TABLE_NAME, "id") + 1;
-    bid = new BidImpl(id, wager, prediction);
-    insertToDatabase(id, wager, prediction);
+    this(table.getMax("id") + 1, wager, prediction);
+    save();
   }
 
-  private void insertToDatabase(int id, int wager, int prediction) {
-    testDb.updateQuery(
-            "INSERT INTO " + TABLE_NAME + " (id, wager, prediction) VALUES (" +
-                    id + "," +
-                    wager + "," +
-                    prediction + ");");
+  private void save() {
+    Row row = new Row();
+    row.addValue("id", id);
+    row.addValue("wager", wager);
+    row.addValue("prediction", prediction);
+    row.addValue("player_id", playerId);
+    table.insertRow(row);
   }
 
   @Override
@@ -50,7 +65,15 @@ public class BidEntry implements Bid {
 
   @Override
   public void setOwner(Player player) {
+    this.playerId = player.getId();
     bid.setOwner(player);
+    updateOwner();
+  }
+
+  private void updateOwner() {
+    Row row = new Row();
+    row.addValue("player_id", playerId);
+    table.updateRow(row, "id", id);
   }
 
   @Override

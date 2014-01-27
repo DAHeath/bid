@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 public class Database {
@@ -40,6 +38,10 @@ public class Database {
     }
   }
 
+  /**
+   * The database must be connected before queries can be made. It is the user's
+   * responsibility to disconnect the database after use.
+   */
   public void connect() {
     try {
       connection = DriverManager.getConnection(address, properties);
@@ -57,7 +59,7 @@ public class Database {
   }
 
   /**
-   * For insert, delete, and update queries.
+   * For insert, delete, and update queries
    */
   public void updateQuery(String query) {
     try {
@@ -67,18 +69,21 @@ public class Database {
     }
   }
 
-  public List<String> selectQuery(String table, String key, String colLabel) {
-    List<String> res = new ArrayList<String>();
+  public ResultSet selectQuery(String query) {
     try {
-      ResultSet rs = connection.prepareStatement("SELECT * FROM " + table + " WHERE " + key).executeQuery();
-      while (rs.next())
-        res.add(rs.getString(colLabel));
+      return connection.prepareStatement(query).executeQuery();
     } catch (SQLException e) {
       e.printStackTrace();
     }
-    return res;
+    return null;
   }
 
+  /**
+   * Select the max value of an integer column
+   * @param table name of the table to search
+   * @param colLabel label of the integer column
+   * @return the largest value in the column
+   */
   public int getMax(String table, String colLabel) {
     try {
       ResultSet rs = connection.prepareStatement("SELECT max(" + colLabel + ") FROM " + table +";").executeQuery();

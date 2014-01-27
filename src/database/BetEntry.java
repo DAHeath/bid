@@ -4,50 +4,50 @@ import bet.Bet;
 import bet.BetImpl;
 import bet.Bid;
 
-import java.util.List;
-
 import static database.Database.testDb;
 
 public class BetEntry implements Bet {
-  public static final String TABLE_NAME = "bet";
-  public static final String CREATE_BET_TABLE =
-          "CREATE TABLE " + TABLE_NAME + "(" +
-                  "id INTEGER, " +
-                  "over_under FLOAT, " +
-                  "PRIMARY KEY (id));";
-  public static final String DROP_BET_TABLE = "DROP TABLE " + TABLE_NAME + ";";
-  public static final String BET_BID = "bet_bid";
-  public static final String CREATE_BET_BID_TABLE =
-          "CREATE TABLE " + BET_BID + " (" +
-                  "bet_id INTEGER, " +
-                  "bid_id INTEGER);";
-  public static final String DROP_BET_BID_TABLE = "DROP TABLE " + BET_BID + ";";
+  public static Table table = new Table(testDb, "bet");
+  static {
+    table.addAttribute(Table.Type.INTEGER, "id");
+    table.addAttribute(Table.Type.FLOAT, "over_under");
+    table.setPrimaryKey("id");
+  }
+  public static Table betBids = new Table(testDb, "betBid");
+  static {
+    betBids.addAttribute(Table.Type.INTEGER, "bet_id");
+    betBids.addAttribute(Table.Type.INTEGER, "bid_id");
+  }
 
   private Bet bet;
+  private final int id;
+  private final float overUnder;
 
   public static Bet load(int id) {
-    float overUnder = Float.parseFloat(testDb.selectQuery(TABLE_NAME, "id=" + id, "over_under").get(0));
+    Row row = table.selectWhere("id", id).get(0);
+    float overUnder = row.floatAt("over_under");
     Bet bet = new BetEntry(id, overUnder);
-    List<String> bidIds = testDb.selectQuery(BET_BID, "bet_id=" + id, "bid_id");
-    for (String bidId: bidIds)
-      bet.acceptBid(BidEntry.load(Integer.parseInt(bidId)));
+    for(Row r: betBids.selectWhere("bet_id", id))
+      bet.acceptBid(BidEntry.load(r.intAt("bid_id")));
     return bet;
   }
 
-  public BetEntry(int id, float overUnder) {
+  private BetEntry(int id, float overUnder) {
+    this.id = id;
+    this.overUnder = overUnder;
     bet = new BetImpl(id, overUnder);
   }
 
   public BetEntry(float overUnder) {
-    int id = testDb.getMax(TABLE_NAME, "id") + 1;
-    bet = new BetImpl(id, overUnder);
-    insertToDatabase(id, overUnder);
+    this(table.getMax("id") + 1, overUnder);
+    save();
   }
 
-  private void insertToDatabase(int id, float overUnder) {
-    testDb.updateQuery("INSERT INTO " + TABLE_NAME + " VALUES (" +
-            id + "," +
-            overUnder + ");");
+  private void save() {
+    Row row = new Row();
+    row.addValue("id", id);
+    row.addValue("over_under", overUnder);
+    table.insertRow(row);
   }
 
   @Override
@@ -57,9 +57,10 @@ public class BetEntry implements Bet {
 
   @Override
   public void acceptBid(Bid bid) {
-    testDb.updateQuery("INSERT INTO " + BET_BID + " VALUES (" +
-            getId() + "," +
-            bid.getId() + ");");
+    Row row = new Row();
+    row.addValue("bet_id", id);
+    row.addValue("bid_id", bid.getId());
+    betBids.insertRow(row);
     bet.acceptBid(bid);
   }
 

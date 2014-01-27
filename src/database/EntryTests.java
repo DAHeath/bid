@@ -13,18 +13,18 @@ public class EntryTests {
   @Before
   public void setUp() {
     testDb.connect();
-    testDb.updateQuery(BidEntry.CREATE_BID_TABLE);
-    testDb.updateQuery(BetEntry.CREATE_BET_TABLE);
-    testDb.updateQuery(BetEntry.CREATE_BET_BID_TABLE);
-    testDb.updateQuery(PlayerEntry.CREATE_PLAYER_TABLE);
+    BidEntry.table.create();
+    BetEntry.table.create();
+    BetEntry.betBids.create();
+    PlayerEntry.table.create();
   }
 
   @After
   public void tearDown() {
-    testDb.updateQuery(BidEntry.DROP_BID_TABLE);
-    testDb.updateQuery(BetEntry.DROP_BET_TABLE);
-    testDb.updateQuery(BetEntry.DROP_BET_BID_TABLE);
-    testDb.updateQuery(PlayerEntry.DROP_PLAYER_TABLE);
+    BidEntry.table.drop();
+    BetEntry.table.drop();
+    BetEntry.betBids.drop();
+    PlayerEntry.table.drop();
     testDb.disconnect();
   }
 
@@ -46,8 +46,7 @@ public class EntryTests {
 
   @Test
   public void betAcceptBidPersistence() {
-    Bet bet = new BetEntry(10.5f);
-    bet.acceptBid(new BidEntry(5, 10));
+    new BetEntry(10.5f).acceptBid(new BidEntry(5, 10));
     Bet exp = new BetImpl(10.5f);
     exp.acceptBid(new BidImpl(5, 10));
     assertEquals(exp, BetEntry.load(0));
@@ -59,6 +58,21 @@ public class EntryTests {
     new PlayerEntry(20);
     assertEquals(new PlayerImpl(0, 10), PlayerEntry.load(0));
     assertEquals(new PlayerImpl(1, 20), PlayerEntry.load(1));
+  }
 
+  @Test
+  public void bidOwnerPersistence() {
+    new BidEntry(10, 20).setOwner(new PlayerEntry(10));
+    Bid exp = new BidImpl(10, 20);
+    exp.setOwner(new PlayerImpl(0, 10));
+    assertEquals(exp, BidEntry.load(0));
+  }
+
+  @Test
+  public void fundsPersistence() {
+    Player p = new PlayerEntry(10);
+    p.receiveFunds(5);
+    p.createBid(10, 20);
+    assertEquals(new PlayerImpl(0, 5), PlayerEntry.load(0));
   }
 }

@@ -7,40 +7,58 @@ import bet.PlayerImpl;
 import static database.Database.testDb;
 
 public class PlayerEntry implements Player {
-  private static final String PLAYER_TABLE = "player";
-  public static final String CREATE_PLAYER_TABLE =
-          "CREATE TABLE " + PLAYER_TABLE + "(" +
-          "id INTEGER, " +
-          "funds INTEGER);";
-  public static final String DROP_PLAYER_TABLE =
-          "DROP TABLE " + PLAYER_TABLE;
+  public static Table table =  new Table(testDb, "player");
+  static {
+    table.addAttribute(Table.Type.INTEGER, "id");
+    table.addAttribute(Table.Type.INTEGER, "funds");
+    table.setPrimaryKey("id");
+  }
+
   private Player player;
+  private int id;
 
   public static Player load(int id) {
-    int funds = Integer.parseInt(testDb.selectQuery(PLAYER_TABLE, "id=" + id, "funds").get(0));
+    Row row = table.selectWhere("id", id).get(0);
+    int funds = row.intAt("funds");
     return new PlayerEntry(id, funds);
   }
 
-  public PlayerEntry(int id, int initialFunds) {
+  private PlayerEntry(int id, int initialFunds) {
+    this.id = id;
     player = new PlayerImpl(id, initialFunds);
   }
 
   public PlayerEntry(int initialFunds) {
-    int id = testDb.getMax(PLAYER_TABLE, "id") + 1;
-    testDb.updateQuery("INSERT INTO " + PLAYER_TABLE + " VALUES (" + id + "," + initialFunds + ");");
-    player = new PlayerImpl(id, initialFunds);
+    this(table.getMax("id") + 1, initialFunds);
+    save();
+  }
+
+  private void save() {
+    Row row = new Row();
+    row.addValue("id", id);
+    row.addValue("funds", player.getFunds());
+    table.insertRow(row);
   }
 
   @Override
   public Bid createBid(int wager, int prediction) {
     Bid bid = new BidEntry(wager, prediction);
     bid.setOwner(player);
+    bid = player.createBid(wager, prediction);
+    updateFunds();
     return bid;
   }
 
   @Override
   public void receiveFunds(int funds) {
     player.receiveFunds(funds);
+    updateFunds();
+  }
+
+  private void updateFunds() {
+    Row row = new Row();
+    row.addValue("funds", player.getFunds());
+    table.updateRow(row, "id", id);
   }
 
   @Override

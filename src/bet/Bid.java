@@ -1,7 +1,6 @@
 package bet;
 
-public interface Bid {
-  public int getId();
+public interface Bid extends Identifiable{
   public void setOwner(Player player);
   public void resolve(float overUnder, int result);
 }
