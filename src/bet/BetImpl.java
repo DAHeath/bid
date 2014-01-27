@@ -44,4 +44,9 @@ public class BetImpl implements Bet {
     Bet b = (Bet)o;
     return b.hashCode() == hashCode();
   }
+
+  @Override
+  public String toString() {
+    return "id: " + id + ", over/under: " + overUnder + ", bids: " + bids;
+  }
 }

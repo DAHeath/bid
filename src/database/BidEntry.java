@@ -4,24 +4,24 @@ import bet.Bid;
 import bet.BidImpl;
 import bet.Player;
 
-import static database.DatabaseConnection.testDb;
+import static database.Database.testDb;
 
 public class BidEntry implements Bid {
   public static final String TABLE_NAME = "bids";
-  public static final String TABLE_CREATION_QUERY =
+  public static final String CREATE_BID_TABLE =
           "CREATE TABLE " + TABLE_NAME + "(" +
                   "id INTEGER, " +
                   "wager INTEGER, " +
                   "prediction INTEGER, " +
                   "owner_id INTEGER, "  +
                   "PRIMARY KEY (id));";
-  public static final String TABLE_DROP_QUERY = "DROP TABLE " + TABLE_NAME + ";";
+  public static final String DROP_BID_TABLE = "DROP TABLE " + TABLE_NAME + ";";
 
   private Bid bid;
 
   public static Bid load(int id) {
-    int wager = Integer.parseInt(testDb.selectQuery(TABLE_NAME, "id=" + id, "wager"));
-    int prediction = Integer.parseInt(testDb.selectQuery(TABLE_NAME, "id=" + id, "prediction"));
+    int wager = Integer.parseInt(testDb.selectQuery(TABLE_NAME, "id=" + id, "wager").get(0));
+    int prediction = Integer.parseInt(testDb.selectQuery(TABLE_NAME, "id=" + id, "prediction").get(0));
     return new BidEntry(id, wager, prediction);
   }
 

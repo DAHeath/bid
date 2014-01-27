@@ -4,21 +4,23 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
-public class DatabaseConnection {
+public class Database {
   private static final String dbClassName = "com.mysql.jdbc.Driver";
   private static final String TEST_ADDRESS = "jdbc:mysql://127.0.0.1/testdb";
   private static final String USERNAME = "testuser";
   private static final String PASSWORD = "test623";
 
-  public static DatabaseConnection testDb = new DatabaseConnection(TEST_ADDRESS);
+  public static Database testDb = new Database(TEST_ADDRESS);
 
   private String address;
   private Connection connection;
   private Properties properties;
 
-  private DatabaseConnection(String address) {
+  private Database(String address) {
     this.address = address;
     initializeProperties();
     loadJdbc();
@@ -65,12 +67,12 @@ public class DatabaseConnection {
     }
   }
 
-  public String selectQuery(String table, String key, String colLabel) {
-    String res = "";
+  public List<String> selectQuery(String table, String key, String colLabel) {
+    List<String> res = new ArrayList<String>();
     try {
       ResultSet rs = connection.prepareStatement("SELECT * FROM " + table + " WHERE " + key).executeQuery();
-      rs.next();
-      res = rs.getString(colLabel);
+      while (rs.next())
+        res.add(rs.getString(colLabel));
     } catch (SQLException e) {
       e.printStackTrace();
     }

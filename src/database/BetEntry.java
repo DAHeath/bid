@@ -4,22 +4,34 @@ import bet.Bet;
 import bet.BetImpl;
 import bet.Bid;
 
-import static database.DatabaseConnection.testDb;
+import java.util.List;
+
+import static database.Database.testDb;
 
 public class BetEntry implements Bet {
-  public static final String TABLE_NAME = "bets";
-  public static final String TABLE_CREATION_QUERY =
+  public static final String TABLE_NAME = "bet";
+  public static final String CREATE_BET_TABLE =
           "CREATE TABLE " + TABLE_NAME + "(" +
                   "id INTEGER, " +
                   "over_under FLOAT, " +
                   "PRIMARY KEY (id));";
-  public static final String TABLE_DROP_QUERY = "DROP TABLE " + TABLE_NAME + ";";
+  public static final String DROP_BET_TABLE = "DROP TABLE " + TABLE_NAME + ";";
+  public static final String BET_BID = "bet_bid";
+  public static final String CREATE_BET_BID_TABLE =
+          "CREATE TABLE " + BET_BID + " (" +
+                  "bet_id INTEGER, " +
+                  "bid_id INTEGER);";
+  public static final String DROP_BET_BID_TABLE = "DROP TABLE " + BET_BID + ";";
 
   private Bet bet;
 
   public static Bet load(int id) {
-    float overUnder = Float.parseFloat(testDb.selectQuery(TABLE_NAME, "id=" + id, "over_under"));
-    return new BetEntry(id, overUnder);
+    float overUnder = Float.parseFloat(testDb.selectQuery(TABLE_NAME, "id=" + id, "over_under").get(0));
+    Bet bet = new BetEntry(id, overUnder);
+    List<String> bidIds = testDb.selectQuery(BET_BID, "bet_id=" + id, "bid_id");
+    for (String bidId: bidIds)
+      bet.acceptBid(BidEntry.load(Integer.parseInt(bidId)));
+    return bet;
   }
 
   public BetEntry(int id, float overUnder) {
@@ -33,7 +45,7 @@ public class BetEntry implements Bet {
   }
 
   private void insertToDatabase(int id, float overUnder) {
-    DatabaseConnection.testDb.updateQuery("INSERT INTO " + TABLE_NAME + " VALUES (" +
+    testDb.updateQuery("INSERT INTO " + TABLE_NAME + " VALUES (" +
             id + "," +
             overUnder + ");");
   }
@@ -45,6 +57,9 @@ public class BetEntry implements Bet {
 
   @Override
   public void acceptBid(Bid bid) {
+    testDb.updateQuery("INSERT INTO " + BET_BID + " VALUES (" +
+            getId() + "," +
+            bid.getId() + ");");
     bet.acceptBid(bid);
   }
 
@@ -61,5 +76,10 @@ public class BetEntry implements Bet {
   @Override
   public boolean equals(Object o) {
     return o instanceof Bet && bet.equals(o);
+  }
+
+  @Override
+  public String toString() {
+    return bet.toString();
   }
 }
