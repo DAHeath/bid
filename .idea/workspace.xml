@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b7a7ae4-41d2-419e-8cb4-7af724529fa7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/BetEntry.java" afterPath="$PROJECT_DIR$/src/database/BetEntry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/BidEntry.java" afterPath="$PROJECT_DIR$/src/database/BidEntry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/PlayerEntry.java" afterPath="$PROJECT_DIR$/src/database/PlayerEntry.java" />
+    <list default="true" id="1b7a7ae4-41d2-419e-8cb4-7af724529fa7" name="Default" comment="Created leagues. Leagues can invite members. Users can receive generic 'Requests'.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/friend/FriendRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/league/League.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/league/LeagueRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/league/LeagueTests.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/league/Request.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/david.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/database/BetEntry.java" afterPath="$PROJECT_DIR$/src/betdatabase/BetEntry.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/database/BidEntry.java" afterPath="$PROJECT_DIR$/src/betdatabase/BidEntry.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/database/EntryTests.java" afterPath="$PROJECT_DIR$/src/betdatabase/EntryTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/database/PlayerEntry.java" afterPath="$PROJECT_DIR$/src/betdatabase/PlayerEntry.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/friend/FriendTests.java" afterPath="$PROJECT_DIR$/src/friend/FriendTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/database/Table.java" afterPath="$PROJECT_DIR$/src/database/Table.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/friend/User.java" afterPath="$PROJECT_DIR$/src/friend/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bid.iws" />
@@ -62,6 +72,10 @@
     <breakpoint_rules />
     <ui_properties />
   </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="bid" />
@@ -69,9 +83,9 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="BetEntry.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/BetEntry.java">
+        <entry file="file://$PROJECT_DIR$/src/betdatabase/BetEntry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="3" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1425">
+            <state line="14" column="31" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,41 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlayerEntry.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/database/PlayerEntry.java">
+      <file leaf-file-name="FriendTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/friend/FriendTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="49" selection-start="487" selection-end="487" vertical-scroll-proportion="0.089709766" vertical-offset="217" max-vertical-offset="1380">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntryTests.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/EntryTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="3" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bet/PlayerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="915">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BidImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bet/BidImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="82" selection-start="1325" selection-end="1325" vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="885">
+            <state line="31" column="0" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -122,7 +105,7 @@
       <file leaf-file-name="Table.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/database/Table.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="6" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1485">
+            <state line="75" column="6" selection-start="2056" selection-end="2056" vertical-scroll-proportion="0.0" vertical-offset="524" max-vertical-offset="1485">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#574#575#0" expanded="true" />
@@ -132,32 +115,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Row.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/Row.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="4" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0" vertical-offset="314" max-vertical-offset="1365">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BidEntry.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/BidEntry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="3" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="1470">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Database.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/database/Database.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="3" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
+            <state line="42" column="38" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,8 +129,60 @@
       <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/friend/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+            <state line="2" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeagueTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/league/LeagueTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FriendRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/friend/FriendRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="3" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="League.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/league/League.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="0.57387865" vertical-offset="0" max-vertical-offset="758">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeagueRequest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/league/LeagueRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="14" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Request.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/league/Request.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="31" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <folding>
+                <element signature="e#232#233#0" expanded="true" />
+                <element signature="e#253#254#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -199,10 +212,18 @@
         <option value="$PROJECT_DIR$/src/bet/PlayerImpl.java" />
         <option value="$PROJECT_DIR$/src/database/Row.java" />
         <option value="$PROJECT_DIR$/src/database/Table.java" />
-        <option value="$PROJECT_DIR$/src/database/Database.java" />
         <option value="$PROJECT_DIR$/src/database/BetEntry.java" />
         <option value="$PROJECT_DIR$/src/database/BidEntry.java" />
         <option value="$PROJECT_DIR$/src/database/PlayerEntry.java" />
+        <option value="$PROJECT_DIR$/src/betdatabase/Database.java" />
+        <option value="$PROJECT_DIR$/src/database/Database.java" />
+        <option value="$PROJECT_DIR$/src/league/LeagueRequest.java" />
+        <option value="$PROJECT_DIR$/src/league/Request.java" />
+        <option value="$PROJECT_DIR$/src/friend/FriendRequest.java" />
+        <option value="$PROJECT_DIR$/src/friend/FriendTests.java" />
+        <option value="$PROJECT_DIR$/src/friend/User.java" />
+        <option value="$PROJECT_DIR$/src/league/LeagueTests.java" />
+        <option value="$PROJECT_DIR$/src/league/League.java" />
       </list>
     </option>
   </component>
@@ -271,6 +292,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="league" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="friend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -290,6 +329,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="betdatabase" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,31 +395,16 @@
       <recent name="database.BetEntry" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="league" />
       <recent name="database" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.database in bid">
-    <configuration default="false" name="BidEntry" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="database.BidEntry" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="bid" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="database in bid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in bid">
+    <configuration default="false" name="betdatabase in bid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bid" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="database" />
+      <option name="PACKAGE_NAME" value="betdatabase" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
@@ -436,6 +478,28 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="bid" />
       <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="league in bid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bid" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="league" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -568,19 +632,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.BidEntry" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.database in bid" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.All in bid" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Table" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Row" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.betdatabase in bid" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.All in bid" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Table" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Row" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.league in bid" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.database in bid" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Row" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Table" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.All in bid" />
-        <item index="4" class="java.lang.String" itemvalue="Application.BidEntry" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in bid" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.league in bid" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.betdatabase in bid" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Row" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Table" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -632,12 +696,16 @@
       <created>1390851356493</created>
       <updated>1390851356493</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Removed most properties from entries.">
+      <created>1390887917044</created>
+      <updated>1390887917044</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1873" height="1085" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -650,7 +718,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13765182" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20647773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -706,7 +774,9 @@
     <MESSAGE value="Bets now correctly save bids that have been given to them." />
     <MESSAGE value="Added player persistence." />
     <MESSAGE value="Delegated Database responsibilities to new Row/Table classes. Additional persistence." />
-    <option name="LAST_COMMIT_MESSAGE" value="Delegated Database responsibilities to new Row/Table classes. Additional persistence." />
+    <MESSAGE value="Removed most properties from entries." />
+    <MESSAGE value="Created leagues. Leagues can invite members. Users can receive generic 'Requests'." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created leagues. Leagues can invite members. Users can receive generic 'Requests'." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -726,13 +796,6 @@
     <entry file="jar:///usr/lib/jvm/default-java/jre/lib/rt.jar!/java/lang/Integer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="105" column="0" selection-start="3971" selection-end="3971" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1650">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/friend/FriendTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="36" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
@@ -800,9 +863,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/EntryTests.java">
+    <entry file="file://$PROJECT_DIR$/src/betdatabase/EntryTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="3" selection-start="1903" selection-end="1903" vertical-scroll-proportion="0.0" vertical-offset="487" max-vertical-offset="1260">
+        <state line="76" column="3" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -818,9 +881,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/betdatabase/BidEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="3" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1500">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/betdatabase/PlayerEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="3" selection-start="987" selection-end="987" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1410">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/database/Table.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="6" selection-start="2049" selection-end="2049" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1485">
+        <state line="75" column="6" selection-start="2056" selection-end="2056" vertical-scroll-proportion="0.0" vertical-offset="524" max-vertical-offset="1485">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#574#575#0" expanded="true" />
@@ -831,41 +912,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/Database.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="3" selection-start="1021" selection-end="1021" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
+        <state line="42" column="38" selection-start="1148" selection-end="1148" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/betdatabase/BetEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="31" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/league/LeagueRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="14" selection-start="176" selection-end="176" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/league/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="31" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding>
+            <element signature="e#232#233#0" expanded="true" />
+            <element signature="e#253#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/friend/FriendRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="3" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/friend/FriendTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/friend/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+        <state line="2" column="0" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/league/LeagueTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/BetEntry.java">
+    <entry file="file://$PROJECT_DIR$/src/league/League.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="3" selection-start="1227" selection-end="1227" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1425">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/BidEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="3" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="1470">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/PlayerEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="49" selection-start="487" selection-end="487" vertical-scroll-proportion="0.089709766" vertical-offset="217" max-vertical-offset="1380">
+        <state line="29" column="0" selection-start="570" selection-end="570" vertical-scroll-proportion="0.57387865" vertical-offset="0" max-vertical-offset="758">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

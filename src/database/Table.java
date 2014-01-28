@@ -71,7 +71,7 @@ public class Table {
     return rows;
   }
 
-  enum Type {
+  public enum Type {
     INTEGER,
     //CHARACTER,
     FLOAT

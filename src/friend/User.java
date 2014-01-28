@@ -1,39 +1,49 @@
 package friend;
 
+import league.Request;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class User {
-  List<User> potentialFriends;
-  List<User> friends;
+  private List<User> friends;
+  private List<Request> requests;
+  private String name;
 
-  public User() {
-    potentialFriends = new ArrayList<User>();
+  public User(String name) {
+    this.name = name;
     friends = new ArrayList<User>();
+    requests = new ArrayList<Request>();
   }
 
   public void requestFriend(User potentialFriend) {
-    potentialFriend.addFriendRequest(this);
+    potentialFriend.addRequest(new FriendRequest(name, this));
   }
 
-  private void addFriendRequest(User potentialFriend) {
-    potentialFriends.add(potentialFriend);
-  }
-
-  public boolean hasFriendRequest(User potentialFriend) {
-    return potentialFriends.contains(potentialFriend);
-  }
-
-  public void acceptRequest(User potentialFriend) {
-    addFriend(potentialFriend);
-    potentialFriend.addFriend(this);
-  }
-
-  private void addFriend(User potentialFriend) {
+  public void addFriend(User potentialFriend) {
     friends.add(potentialFriend);
   }
 
   public boolean hasFriend(User friend) {
     return friends.contains(friend);
+  }
+
+  public void addRequest(Request request) {
+    requests.add(request);
+  }
+
+  private Request getRequest(String requestName) {
+    for (Request request: requests)
+      if (request.getName().equals(requestName))
+        return request;
+    return null;
+  }
+
+  public boolean hasRequest(String requestName) {
+    return getRequest(requestName) != null;
+  }
+
+  public void acceptRequest(String requestName) {
+    getRequest(requestName).accept(this);
   }
 }

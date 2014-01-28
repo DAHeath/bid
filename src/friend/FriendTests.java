@@ -6,26 +6,26 @@ import org.junit.Before;
 import static junit.framework.Assert.*;
 
 public class FriendTests {
-  private User u;
-  private User friend;
+  private User sender;
+  private User receiver;
 
   @Before
   public void setUp() {
-    u = new User();
-    friend = new User();
+    sender = new User("sender");
+    receiver = new User("receiver");
   }
 
   @Test
   public void canRequestFriend() {
-    u.requestFriend(friend);
-    assertTrue(friend.hasFriendRequest(u));
+    sender.requestFriend(receiver);
+    assertTrue(receiver.hasRequest("sender"));
   }
 
   @Test
   public void canAcceptRequest() {
-    u.requestFriend(friend);
-    friend.acceptRequest(u);
-    assertTrue(u.hasFriend(friend));
-    assertTrue(friend.hasFriend(u));
+    sender.requestFriend(receiver);
+    receiver.acceptRequest("sender");
+    assertTrue(sender.hasFriend(receiver));
+    assertTrue(receiver.hasFriend(sender));
   }
 }

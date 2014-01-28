@@ -1,8 +1,10 @@
-package database;
+package betdatabase;
 
 import bet.Bet;
 import bet.BetImpl;
 import bet.Bid;
+import database.Row;
+import database.Table;
 
 import static database.Database.testDb;
 

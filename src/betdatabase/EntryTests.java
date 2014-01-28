@@ -1,4 +1,4 @@
-package database;
+package betdatabase;
 
 import bet.*;
 import org.junit.Test;
