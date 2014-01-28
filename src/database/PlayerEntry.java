@@ -15,7 +15,6 @@ public class PlayerEntry implements Player {
   }
 
   private Player player;
-  private int id;
 
   public static Player load(int id) {
     Row row = table.selectWhere("id", id).get(0);
@@ -24,7 +23,6 @@ public class PlayerEntry implements Player {
   }
 
   private PlayerEntry(int id, int initialFunds) {
-    this.id = id;
     player = new PlayerImpl(id, initialFunds);
   }
 
@@ -35,7 +33,7 @@ public class PlayerEntry implements Player {
 
   private void save() {
     Row row = new Row();
-    row.addValue("id", id);
+    row.addValue("id", player.getId());
     row.addValue("funds", player.getFunds());
     table.insertRow(row);
   }
@@ -44,7 +42,7 @@ public class PlayerEntry implements Player {
   public Bid createBid(int wager, int prediction) {
     Bid bid = new BidEntry(wager, prediction);
     bid.setOwner(player);
-    bid = player.createBid(wager, prediction);
+    player.receiveFunds(-wager);
     updateFunds();
     return bid;
   }
@@ -58,7 +56,7 @@ public class PlayerEntry implements Player {
   private void updateFunds() {
     Row row = new Row();
     row.addValue("funds", player.getFunds());
-    table.updateRow(row, "id", id);
+    table.updateRow(row, "id", player.getId());
   }
 
   @Override

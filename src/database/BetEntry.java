@@ -20,32 +20,36 @@ public class BetEntry implements Bet {
   }
 
   private Bet bet;
-  private final int id;
-  private final float overUnder;
 
   public static Bet load(int id) {
     Row row = table.selectWhere("id", id).get(0);
-    float overUnder = row.floatAt("over_under");
-    Bet bet = new BetEntry(id, overUnder);
-    for(Row r: betBids.selectWhere("bet_id", id))
-      bet.acceptBid(BidEntry.load(r.intAt("bid_id")));
+    Bet bet = loadBet(id, row);
+    loadBids(id, bet);
     return bet;
   }
 
+  private static Bet loadBet(int id, Row row) {
+    float overUnder = row.floatAt("over_under");
+    return new BetEntry(id, overUnder);
+  }
+
+  private static void loadBids(int id, Bet bet) {
+    for(Row r: betBids.selectWhere("bet_id", id))
+      bet.acceptBid(BidEntry.load(r.intAt("bid_id")));
+  }
+
   private BetEntry(int id, float overUnder) {
-    this.id = id;
-    this.overUnder = overUnder;
     bet = new BetImpl(id, overUnder);
   }
 
   public BetEntry(float overUnder) {
     this(table.getMax("id") + 1, overUnder);
-    save();
+    save(overUnder);
   }
 
-  private void save() {
+  private void save(float overUnder) {
     Row row = new Row();
-    row.addValue("id", id);
+    row.addValue("id", bet.getId());
     row.addValue("over_under", overUnder);
     table.insertRow(row);
   }
@@ -58,7 +62,7 @@ public class BetEntry implements Bet {
   @Override
   public void acceptBid(Bid bid) {
     Row row = new Row();
-    row.addValue("bet_id", id);
+    row.addValue("bet_id", bet.getId());
     row.addValue("bid_id", bid.getId());
     betBids.insertRow(row);
     bet.acceptBid(bid);

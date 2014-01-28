@@ -17,18 +17,18 @@ public class BidEntry implements Bid {
   }
 
   private Bid bid;
-  private final int id;
-  private final int wager;
-  private final int prediction;
-  private int playerId;
 
   public static Bid load(int id) {
     Row row = table.selectWhere("id", id).get(0);
-    int wager = row.intAt("wager");
-    int prediction = row.intAt("prediction");
-    BidEntry bid = new BidEntry(id, wager, prediction);
+    BidEntry bid = loadBid(id, row);
     loadOwner(row.intAt("player_id"), bid);
     return bid;
+  }
+
+  private static BidEntry loadBid(int id, Row row) {
+    int wager = row.intAt("wager");
+    int prediction = row.intAt("prediction");
+    return new BidEntry(id, wager, prediction);
   }
 
   private static void loadOwner(int playerId, BidEntry bid) {
@@ -37,24 +37,20 @@ public class BidEntry implements Bid {
   }
 
   private BidEntry(int id, int wager, int prediction) {
-    this.id = id;
-    this.wager = wager;
-    this.prediction = prediction;
-    this.playerId = -1;
     bid = new BidImpl(id, wager, prediction);
   }
 
   public BidEntry(int wager, int prediction) {
     this(table.getMax("id") + 1, wager, prediction);
-    save();
+    save(wager, prediction);
   }
 
-  private void save() {
+  private void save(int wager, int prediction) {
     Row row = new Row();
-    row.addValue("id", id);
+    row.addValue("id", bid.getId());
     row.addValue("wager", wager);
     row.addValue("prediction", prediction);
-    row.addValue("player_id", playerId);
+    row.addValue("player_id", -1);
     table.insertRow(row);
   }
 
@@ -65,15 +61,14 @@ public class BidEntry implements Bid {
 
   @Override
   public void setOwner(Player player) {
-    this.playerId = player.getId();
     bid.setOwner(player);
-    updateOwner();
+    updateOwner(player.getId());
   }
 
-  private void updateOwner() {
+  private void updateOwner(int playerId) {
     Row row = new Row();
     row.addValue("player_id", playerId);
-    table.updateRow(row, "id", id);
+    table.updateRow(row, "id", bid.getId());
   }
 
   @Override
