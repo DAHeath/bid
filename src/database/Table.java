@@ -53,7 +53,7 @@ public class Table {
     return database.getMax(name, column);
   }
 
-  public List<Row> selectWhere(String column, int value) {
+  public List<Row> selectWhere(String column, String value) {
     String query = "SELECT * FROM " + name + " WHERE " + column + "=" + value + ";";
     ResultSet rs = database.selectQuery(query);
     List<Row> rows = new ArrayList<Row>();
@@ -71,9 +71,13 @@ public class Table {
     return rows;
   }
 
+  public List<Row> selectWhere(String column, int value) {
+    return selectWhere(column, String.valueOf(value));
+  }
+
   public enum Type {
     INTEGER,
-    //CHARACTER,
+    CHARACTER,
     FLOAT
   }
 
@@ -87,7 +91,10 @@ public class Table {
     }
 
     public String sql() {
-      return label + " " + type.toString();
+      if (type == Type.CHARACTER)
+        return label + " " + type.toString() + "(20)";
+      else
+        return label + " " + type.toString();
     }
   }
 }

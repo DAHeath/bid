@@ -1,6 +1,4 @@
-package league;
-
-import friend.User;
+package person;
 
 public abstract class Request {
   private final String name;
@@ -9,7 +7,7 @@ public abstract class Request {
     this.name = name;
   }
 
-  public abstract void accept(User acceptor);
+  public abstract void accept(Person acceptor);
 
   public String getName() {
     return name;

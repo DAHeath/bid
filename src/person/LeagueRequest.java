@@ -1,6 +1,4 @@
-package league;
-
-import friend.User;
+package person;
 
 public class LeagueRequest extends Request {
   private League league;
@@ -11,7 +9,7 @@ public class LeagueRequest extends Request {
   }
 
   @Override
-  public void accept(User acceptor) {
+  public void accept(Person acceptor) {
     league.addMember(acceptor);
   }
 }

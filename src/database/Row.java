@@ -14,15 +14,15 @@ public class Row {
   }
 
   public void addValue(String label, String value) {
-    values.put(label, value);
+    values.put(label, "'" + value + "'");
   }
 
   public void addValue(String label, int value) {
-    addValue(label, "" + value);
+    values.put(label, "" + value);
   }
 
   public void addValue(String label, float value) {
-    addValue(label, "" +value);
+    values.put(label, "" +value);
   }
 
   public int intAt(String label) {
@@ -33,11 +33,10 @@ public class Row {
     return Float.parseFloat(values.get(label));
   }
 
-  /*
   public String stringAt(String label) {
-    return values.get(label);
+    String value =  values.get(label);
+    return value.substring(1, value.length()-1);
   }
-  */
 
   public String getInsertSql() {
     Collection<String> keys = values.keySet();

@@ -1,6 +1,5 @@
-package league;
+package person;
 
-import friend.User;
 import org.junit.Test;
 import org.junit.Before;
 
@@ -10,11 +9,11 @@ public class LeagueTests {
 
   public static final String LEAGUE_NAME = "LEAGUE NAME";
   private League league;
-  private User founder;
+  private Person founder;
 
   @Before
   public void setUp() {
-    founder = new User("founder");
+    founder = new PersonImpl("founder");
     league = new League(LEAGUE_NAME, founder);
   }
 
@@ -25,7 +24,7 @@ public class LeagueTests {
 
   @Test
   public void canInviteUser() {
-    User toInvite = new User("to invite");
+    Person toInvite = new PersonImpl("to invite");
     league.sendInvite(toInvite);
     toInvite.acceptRequest(LEAGUE_NAME);
     assertTrue(league.hasMember(toInvite));

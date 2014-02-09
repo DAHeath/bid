@@ -1,4 +1,4 @@
-package friend;
+package person;
 
 import org.junit.Test;
 import org.junit.Before;
@@ -6,13 +6,13 @@ import org.junit.Before;
 import static junit.framework.Assert.*;
 
 public class FriendTests {
-  private User sender;
-  private User receiver;
+  private Person sender;
+  private Person receiver;
 
   @Before
   public void setUp() {
-    sender = new User("sender");
-    receiver = new User("receiver");
+    sender = new PersonImpl("sender");
+    receiver = new PersonImpl("receiver");
   }
 
   @Test

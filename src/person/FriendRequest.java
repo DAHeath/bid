@@ -1,17 +1,15 @@
-package friend;
-
-import league.Request;
+package person;
 
 public class FriendRequest extends Request {
-  private final User sender;
+  private final Person sender;
 
-  public FriendRequest(String name, User sender) {
+  public FriendRequest(String name, Person sender) {
     super(name);
     this.sender = sender;
   }
 
   @Override
-  public void accept(User acceptor) {
+  public void accept(Person acceptor) {
     acceptor.addFriend(sender);
     sender.addFriend(acceptor);
   }

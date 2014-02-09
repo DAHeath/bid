@@ -1,4 +1,4 @@
-package betdatabase;
+package bet.betdatabase;
 
 import bet.Bet;
 import bet.BetImpl;
